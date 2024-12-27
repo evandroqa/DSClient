@@ -8,6 +8,7 @@ import com.devsuperior.dsclient.entities.Client;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
@@ -26,6 +27,7 @@ public class ClientDTO {
 	@Positive(message="A renda do cliente deve ser positivo")
 	private Double income;
 	
+	@PastOrPresent(message="Data de nascimento não pode ser data futura")
 	private LocalDate birthDate;
 	
 	@Min(0)
