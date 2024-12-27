@@ -37,10 +37,32 @@ SELECT * FROM tb_client ORDER BY id
 
 URI para teste no **Postman**
 ~~~javascript
--- GET Clientes de 1 ao 10
-http://localhost:8080/api/clients/1
--- GET todos os Clients - busca paginada
+-- GET client by id - from 1 to 10
 http://localhost:8080/api/clients/1
 
+-- GET all clients - paged search
+http://localhost:8080/api/clients/1
 
+-- POST client (insert)
+http://localhost:8080/api/clients/1
+{
+    "name": "Maria Silva",
+    "cpf": "61064458009",
+    "income": 6500.0,
+    "birthDate": "1994-07-20",
+    "children": 2
+}
+
+-- PUT client (update)
+http://localhost:8080/api/clients/1
+{
+    "name": "Maria Silvaaa",
+    "cpf": "01055005005",
+    "income": 6500.0,
+    "birthDate": "1994-07-20",
+    "children": 2
+}
+
+-- DEL client (delete)
+http://localhost:8080/api/clients/1
 ~~~
